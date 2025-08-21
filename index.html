@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DoneRight • Plumbing & Heating</title>
+<meta name="description" content="Fast, tidy plumbing & heating — boilers, bathrooms, leaks & 24/7 emergencies. Upfront quotes. Fully insured. Gas Safe." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#f7fafc;
+    --bg-2:#ffffff;
+    --ink:#0b1220;
+    --muted:#5b6472;
+    --line:rgba(17,24,39,.12);
+    --accent:#00b3a4;
+    --accent-2:#6b7cff;
+    --warn:#e6a700;
+    --radius:14px;
+    --shadow:0 8px 24px rgba(17,24,39,.08);
+  }
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1200px;margin-inline:auto;padding:0 28px}
+  .grid{display:grid;gap:32px}
+  .section{padding:80px 0}
+  .card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:32px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:12px;font-weight:700;letter-spacing:.2px;cursor:pointer}
+  .btn.primary{background:linear-gradient(90deg, var(--accent), #41e6d6);color:#052825}
+  .btn.ghost{border:1px solid var(--line);background:#fff}
+  .badge{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(0,179,164,.1);font-weight:600;font-size:14px}
+  .muted{color:var(--muted)}
+  .mono{font-family:"JetBrains Mono", monospace;font-size:14px}
+
+  /* HEADER */
+  .topbar{position:sticky;top:0;z-index:60;background:#fff;border-bottom:1px solid var(--line)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{display:flex;align-items:center;gap:14px;font-weight:800;font-size:22px}
+  .logo{width:46px;height:46px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(160deg,var(--accent),var(--accent-2));color:#fff;font-size:24px}
+  .nav{display:flex;gap:18px}
+  .nav a{padding:10px 16px;border-radius:8px;font-weight:600}
+  .nav a:hover{background:rgba(0,0,0,.04)}
+
+  /* HERO */
+  .hero{padding:100px 0;background:linear-gradient(90deg,rgba(0,179,164,.05),rgba(107,124,255,.08))}
+  .hero .grid{grid-template-columns:1fr 1fr;align-items:center;gap:60px}
+  .hero h1{font-size:clamp(40px,6vw,72px);line-height:1.15;margin:0 0 20px;font-weight:800}
+  .hero p{font-size:20px;color:var(--muted);margin-bottom:28px;max-width:520px}
+
+  /* SERVICES */
+  .services h2{font-size:32px;font-weight:800;margin:0 0 12px}
+  .services p{margin:0 0 32px;color:var(--muted);font-size:18px}
+  .services .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px}
+  .service{border-radius:var(--radius);background:var(--bg-2);border:1px solid var(--line);padding:36px;display:flex;flex-direction:column;align-items:flex-start;transition:.3s ease}
+  .service:hover{transform:translateY(-6px);box-shadow:0 16px 24px rgba(17,24,39,.08)}
+  .service .icon{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;font-size:28px;margin-bottom:20px;background:linear-gradient(160deg,var(--accent),var(--accent-2));color:#fff}
+  .service h3{margin:0 0 10px;font-size:22px;font-weight:700}
+  .service p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}
+
+  /* WORK */
+  .work .grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px}
+
+  /* REVIEWS */
+  .reviews .grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px}
+  .review{padding:28px}
+
+  /* CONTACT */
+  .contact .grid{grid-template-columns:1fr 1fr;gap:40px}
+  .form input,.form textarea{width:100%;padding:14px 16px;border-radius:10px;border:1px solid var(--line);margin-top:14px;font-size:16px}
+  .form textarea{min-height:140px}
+
+  footer{padding:32px 0;background:#fff;border-top:1px solid var(--line)}
+
+  @media(max-width:900px){
+    .hero .grid{grid-template-columns:1fr;gap:40px}
+    .contact .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container row">
+    <div class="brand"><div class="logo">🔧</div>DoneRight Plumbing & Heating</div>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#areas">Areas</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="btn ghost">Get Quote</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container grid">
+    <div>
+      <div class="badge mono">NORTHAMPTONSHIRE • SAME‑DAY CALLOUTS</div>
+      <h1>Fixed right. <span style="color:var(--accent)">First time.</span></h1>
+      <p>Boilers, bathrooms, leaks & 24/7 emergencies. Upfront quotes. Clean, tidy work. Fully insured.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a class="btn primary" href="#contact">Get a fast quote</a>
+        <a class="btn ghost" href="tel:+441234567890">📞 01234 567 890</a>
+      </div>
+    </div>
+    <div>
+      <img style="border-radius:20px;border:1px solid var(--line)" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="Engineer at work" />
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <p>From small leaks to full installs, we’ve got you covered.</p>
+    <div class="cards">
+      <div class="service">
+        <div class="icon">🔥</div>
+        <h3>Boiler Install & Service</h3>
+        <p>New combis, annual servicing, repairs & smart controls.</p>
+      </div>
+      <div class="service">
+        <div class="icon">🚿</div>
+        <h3>Bathrooms</h3>
+        <p>Full fit‑outs, tiling, power showers, accessibility upgrades.</p>
+      </div>
+      <div class="service">
+        <div class="icon">💧</div>
+        <h3>Leaks & Emergencies</h3>
+        <p>Burst pipes, blocked drains & 24/7 callouts.</p>
+      </div>
+      <div class="service">
+        <div class="icon">🏠</div>
+        <h3>Landlord Safety</h3>
+        <p>CP12 certificates & annual maintenance plans.</p>
+      </div>
+      <div class="service">
+        <div class="icon">🌡️</div>
+        <h3>Heating & Radiators</h3>
+        <p>Installs, balancing & power flushing.</p>
+      </div>
+      <div class="service">
+        <div class="icon">🧼</div>
+        <h3>Water Quality</h3>
+        <p>Softeners, filters & descalers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Other sections (areas, work, reviews, contact, footer) remain the same -->
+
+</body>
+</html>
